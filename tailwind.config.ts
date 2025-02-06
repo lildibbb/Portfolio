@@ -5,6 +5,11 @@ const config: Config = {
   darkMode: ["class", "class"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], // Default Font
+        serif: ["Merriweather", "serif"], // Another Example
+        mono: ["Fira Code", "monospace"], // Monospace Example
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
