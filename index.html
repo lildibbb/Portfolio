@@ -2,12 +2,71 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=5"
+    />
+
+    <!-- Primary Meta Tags -->
+    <title>Adib Asyraaf | Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Adib Asyraaf, a Full Stack Developer with expertise in React, TypeScript, and modern web technologies."
+    />
+    <meta name="author" content="Adib Asyraaf" />
+
+    <!-- Open Graph Meta Tags (for social sharing) -->
+    <meta property="og:title" content="Adib Asyraaf | Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Explore my portfolio, projects, and skills in modern web development."
+    />
+    <meta property="og:image" content="/assets/preview-image.png" />
+    <!-- Update with actual image -->
+    <meta property="og:url" content="https://adibasyraaf.me" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Adib Asyraaf | Full Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Adib Asyraaf, a Full Stack Developer."
+    />
+    <meta name="twitter:image" content="/assets/preview-image.png" />
+
+    <!-- Favicon and PWA Icons -->
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <!-- PWA Support -->
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/src/main.tsx" as="script" />
+
+    <!-- External Fonts (Optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- NoScript Fallback -->
+    <noscript>
+      <p>
+        This website requires JavaScript to function properly. Please enable
+        JavaScript in your browser settings.
+      </p>
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
