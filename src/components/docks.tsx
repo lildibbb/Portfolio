@@ -3,31 +3,54 @@
 import React from "react";
 
 import { Dock, DockIcon } from "@/components/ui/dock";
-import { Link } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export function Docks() {
   return (
-    <div className="relative">
+    <motion.div
+      className="relative flex aspect-square cursor-pointer items-center justify-center rounded-full"
+      whileHover={{ scale: 1.2 }}
+    >
       <Dock direction="middle">
-        <a href="https://github.com/lildibbb">
+        <motion.a
+          href="https://github.com/lildibbb"
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.3 }}
+          target="_blank"
+        >
           <DockIcon>
             <Icons.gitHub className="size-6" />
           </DockIcon>
-        </a>
-        <a href="https://www.linkedin.com/in/adib-asyraaf/">
+        </motion.a>
+
+        <motion.a
+          href="https://www.linkedin.com/in/adib-asyraaf/"
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.3 }}
+          target="_blank"
+        >
           <DockIcon>
             <Icons.linkedIn className="size-6" />
           </DockIcon>
-        </a>
-        <a href="https://x.com/adbsyrff">
+        </motion.a>
+
+        <motion.a
+          href="https://x.com/adbsyrff"
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.3 }}
+          target="_blank"
+        >
           <DockIcon>
             <Icons.twitter className="size-6" />
           </DockIcon>
-        </a>
+        </motion.a>
       </Dock>
-    </div>
+    </motion.div>
   );
 }
 
