@@ -47,7 +47,7 @@ const projects = [
       "Vite",
       "TanStack Router",
       "ShadCNUI",
-      "RechartJS",
+      "Lightweight Chart (TradingView)",
       "FastAPI",
       "Python",
       "TortoiseORM",
