@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Github, Globe } from "lucide-react";
 import physioconnect from "@/assets/physioconnect.png";
-
+import crypto_trading_bot from "@/assets/crypto_trading_bot.png";
 const projects = [
   {
     title: "PhysioConnect",
@@ -33,6 +33,33 @@ const projects = [
         icon: <Globe className="h-4 w-4" />,
         type: "Live Demo",
         href: "https://physioconnect.adibasyraaf.me/",
+      },
+    ],
+  },
+  {
+    title: "Crypto Trading Bot",
+    description:
+      "A real-time crypto trading platform in development, utilizing Binance WebSocket for live market updates. The platform is designed with a seamless UI for efficient trading, and AI-driven market analysis will be integrated in the future.",
+    dates: "2025 - Present",
+    tags: [
+      "TypeScript",
+      "React",
+      "Vite",
+      "TanStack Router",
+      "ShadCNUI",
+      "RechartJS",
+      "FastAPI",
+      "Python",
+      "TortoiseORM",
+      "PostgreSQL",
+      "Aerich",
+    ],
+    image: crypto_trading_bot, // Replace this with your project image reference
+    links: [
+      {
+        icon: <Github className="h-4 w-4" />,
+        type: "GitHub",
+        href: "https://github.com/lildibbb/crypto_trading",
       },
     ],
   },
