@@ -27,7 +27,7 @@ const projects = [
       {
         icon: <Github className="h-4 w-4" />,
         type: "GitHub",
-        href: "https://github.com/yourusername/project1",
+        href: "https://github.com/lildibbb/Physiotherapy-Treatment-Booking-System",
       },
       {
         icon: <Globe className="h-4 w-4" />,
