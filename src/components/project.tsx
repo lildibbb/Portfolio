@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Github, Globe } from "lucide-react";
 import physioconnect from "@/assets/physioconnect.png";
 import crypto_trading_bot from "@/assets/crypto_trading_bot.png";
+import movie_dex from "@/assets/movie_dex.png";
 const projects = [
   {
     title: "PhysioConnect",
@@ -60,6 +61,21 @@ const projects = [
         icon: <Github className="h-4 w-4" />,
         type: "GitHub",
         href: "https://github.com/lildibbb/crypto_trading",
+      },
+    ],
+  },
+  {
+    title: "MovieDex",
+    description:
+      "Movie platform to give ratings and reviews for watched movies",
+    dates: "2024",
+    tags: ["TypeScript", "React", "Laravel"],
+    image: movie_dex, // Replace this with your project image reference
+    links: [
+      {
+        icon: <Github className="h-4 w-4" />,
+        type: "GitHub",
+        href: "https://github.com/kyziq/movie-dex-web-backend",
       },
     ],
   },
