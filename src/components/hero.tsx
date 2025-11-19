@@ -26,16 +26,16 @@ const socialLinks = [
   },
   {
     icon: <FileUser className="h-5 w-5" />,
-    href: "/RESUME_ADIB_ASYRAAF_latest.pdf", // Ensure it's in the public folder
+    href: "/a.pdf", 
     label: "Download Resume",
-    download: "Adib_Asyraaf_Resume.pdf", // Ensures filename on download
+    download: "Adib_Asyraaf_Resume.pdf", 
   },
 ];
 
 const Hero = () => {
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-center lg:text-left lg:flex-row container mx-auto px-6">
-      {/* Left Section - Text & Social Links */}
+    
       <div className="space-y-6">
         <div className="space-y-4">
           <motion.h1
@@ -54,7 +54,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Social Links */}
+       
         <div className="flex place-items-center justify-center lg:justify-start gap-4">
           {socialLinks.map((link) => (
             <Button
@@ -68,7 +68,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.label}
-                {...(link.download ? { download: link.download } : {})} // Forces download filename
+                {...(link.download ? { download: link.download } : {})} 
               >
                 {link.icon}
               </a>

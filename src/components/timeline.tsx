@@ -2,107 +2,70 @@ import { Timeline } from "@/components/ui/timeline";
 
 const timelineData = [
   {
-    title: "2024",
+    title: "March 2025 - June 2025",
     content: (
       <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          Built and launched Aceternity UI and Aceternity UI Pro from scratch.
+        <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+          Software Intern
+        </h3>
+        <p className="text-sm text-primary font-medium mb-4">
+          REVNOLOGY GROUP (M) SDN BHD • Petaling Jaya
         </p>
-        <div className="grid grid-cols-2 gap-4">
-          <img
-            src="https://assets.aceternity.com/templates/startup-1.webp"
-            alt="startup template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
-          <img
-            src="https://assets.aceternity.com/templates/startup-2.webp"
-            alt="startup template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
-          <img
-            src="https://assets.aceternity.com/templates/startup-3.webp"
-            alt="startup template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
-          <img
-            src="https://assets.aceternity.com/templates/startup-4.webp"
-            alt="startup template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "Early 2023",
-    content: (
-      <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          Worked on multiple design projects and enhanced my frontend
-          development skills.
-        </p>
-        <div className="grid grid-cols-2 gap-4">
-          <img
-            src="https://assets.aceternity.com/pro/hero-sections.png"
-            alt="hero template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
-          <img
-            src="https://assets.aceternity.com/features-section.png"
-            alt="feature template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
-          <img
-            src="https://assets.aceternity.com/pro/bento-grids.png"
-            alt="bento template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
-          <img
-            src="https://assets.aceternity.com/cards.png"
-            alt="cards template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "Changelog",
-    content: (
-      <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-          Deployed 5 new components on Aceternity today.
-        </p>
-        <div className="mb-8">
-          <ul className="list-disc list-inside text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            <li>✅ Card grid component</li>
-            <li>✅ Startup template Aceternity</li>
-            <li>✅ Random file upload lol</li>
-            <li>✅ Himesh Reshammiya Music CD</li>
-            <li>✅ Salman Bhai Fan Club registrations open</li>
+        <div className="space-y-3 mb-6">
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm">
+            Developed an internal task reminder system that improved task management efficiency by 30%, showcasing full-stack development capabilities.
+          </p>
+          <ul className="list-disc list-inside text-neutral-700 dark:text-neutral-300 text-xs md:text-sm space-y-1">
+            <li>Enhanced UI and resolved bugs across Tazte food ordering app's merchant, admin, and user frontends</li>
+            <li>Independently deployed production-ready internal tools</li>
+            <li>Gained hands-on experience in full-stack development workflow</li>
           </ul>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          <img
-            src="https://assets.aceternity.com/pro/hero-sections.png"
-            alt="hero template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
-          <img
-            src="https://assets.aceternity.com/features-section.png"
-            alt="feature template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
-          <img
-            src="https://assets.aceternity.com/pro/bento-grids.png"
-            alt="bento template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
-          <img
-            src="https://assets.aceternity.com/cards.png"
-            alt="cards template"
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-md"
-          />
+      </div>
+    ),
+  },
+  {
+    title: "September 2022 - March 2023",
+    content: (
+      <div>
+        <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+          Quality Assurance Tester Intern
+        </h3>
+        <p className="text-sm text-primary font-medium mb-4">
+          UNIJAYA RESOURCES SDN BHD • Kuala Lumpur
+        </p>
+        <div className="space-y-3 mb-6">
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm">
+            Ensured bug-free deployments through comprehensive manual testing in an Agile environment, accelerating issue resolution by 30%.
+          </p>
+          <ul className="list-disc list-inside text-neutral-700 dark:text-neutral-300 text-xs md:text-sm space-y-1">
+            <li>Prepared and executed UAT and FAT test cases with thoroughness</li>
+            <li>Managed manual system testing and internal QA before client meetings</li>
+            <li>Provided hands-on assistance during client UAT and FAT sessions</li>
+            <li>Bridged communication between clients and developers for faster issue resolution</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Academic Journey",
+    content: (
+      <div>
+        <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+          Computer Science Student
+        </h3>
+        <p className="text-sm text-primary font-medium mb-4">
+          Universiti Teknologi MARA (UiTM) • Expected Graduation: August 2025
+        </p>
+        <div className="space-y-3 mb-6">
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm">
+            Building expertise in full-stack development with focus on Next.js, NestJS, and modern web technologies.
+          </p>
+          <ul className="list-disc list-inside text-neutral-700 dark:text-neutral-300 text-xs md:text-sm space-y-1">
+            <li>International Certificate of Digital Literacy (ICDL) - April 2025</li>
+            <li>Awarded with Yayasan Telekom Malaysia Scholarship</li>
+          </ul>
         </div>
       </div>
     ),
@@ -111,30 +74,20 @@ const timelineData = [
 
 const TimelineSection = () => {
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center mt-10 py-20 md:py-32 gap-10">
-      {/* Left Section - Timeline */}
-      <div className="text-center lg:text-start space-y-6">
-        <div className="space-y-4">
+    <section className="container mt-10 py-20 md:py-32">
+    
+      <div className="max-w-4xl mx-auto space-y-6">
+        <div className="text-center space-y-4">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-            My Journey
+            My Professional Journey
           </h2>
           <p className="text-lg text-muted-foreground">
-            A timeline of my projects, milestones, and tech advancements.
+            From QA testing to full-stack development :V
           </p>
         </div>
 
-        {/* Timeline Component */}
+       
         <Timeline data={timelineData} />
-      </div>
-
-      {/* Right Section - Decorative Image */}
-      <div className="relative">
-        <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-primary to-primary-foreground blur-md opacity-50" />
-        <img
-          src="/timeline-placeholder.jpg"
-          alt="Timeline Illustration"
-          className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-2 border-border"
-        />
       </div>
     </section>
   );

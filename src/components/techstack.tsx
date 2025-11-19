@@ -25,15 +25,45 @@ const techStack: TechItem[] = [
     category: "Frontend",
   },
   {
+    name: "Next.js",
+    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
+    level: "Advanced",
+    category: "Frontend",
+  },
+  {
     name: "TypeScript",
     logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
     level: "Advanced",
     category: "Frontend",
   },
   {
+    name: "Redux",
+    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
+    level: "Intermediate",
+    category: "Frontend",
+  },
+  {
+    name: "Tailwind CSS",
+    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg",
+    level: "Advanced",
+    category: "Frontend",
+  },
+  {
+    name: "PWA",
+    logo: "https://cdn.jsdelivr.net/gh/webmaxru/progressive-web-apps-logo/pwalogo.svg",
+    level: "Intermediate",
+    category: "Frontend",
+  },
+  {
     name: "Node.js",
     logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
     level: "Intermediate",
+    category: "Backend",
+  },
+  {
+    name: "NestJS",
+    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-original.svg",
+    level: "Advanced",
     category: "Backend",
   },
   {
@@ -49,24 +79,6 @@ const techStack: TechItem[] = [
     category: "Backend",
   },
   {
-    name: "Tailwind CSS",
-    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg",
-    level: "Advanced",
-    category: "Frontend",
-  },
-  {
-    name: "PostgreSQL",
-    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
-    level: "Advanced",
-    category: "Database",
-  },
-  {
-    name: "Git",
-    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
-    level: "Advanced",
-    category: "DevOps",
-  },
-  {
     name: "Laravel",
     logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-original.svg",
     level: "Intermediate",
@@ -79,10 +91,34 @@ const techStack: TechItem[] = [
     category: "Backend",
   },
   {
+    name: "PostgreSQL",
+    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
+    level: "Advanced",
+    category: "Database",
+  },
+  {
+    name: "TypeORM",
+    logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/typeorm.svg",
+    level: "Advanced",
+    category: "Database",
+  },
+  {
     name: "Drizzle ORM",
-    logo: "https://console.dev/img/favicons/orm.drizzle.team.jpg",
+    logo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ficonlogovector.com%2Flogo%2Fdrizzle-orm&psig=AOvVaw2kX_AAMngQKc9ObxZhSONd&ust=1763624824704000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPCS4svc_ZADFQAAAAAdAAAAABAm",
     level: "Intermediate",
     category: "Database",
+  },
+  {
+    name: "Redis",
+    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg",
+    level: "Intermediate",
+    category: "Database",
+  },
+  {
+    name: "Git",
+    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+    level: "Advanced",
+    category: "DevOps",
   },
 ];
 
@@ -101,7 +137,6 @@ export default function TechStack() {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-background to-background/50 py-20 overflow-hidden">
-      {/* Background Effects */}
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
       <div className="absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
@@ -134,12 +169,9 @@ export default function TechStack() {
                   <TooltipTrigger asChild>
                     <Card className="relative group">
                       <div className="relative p-6 flex flex-col items-center gap-4 transition-transform duration-300 transform hover:scale-105">
-                        {/* Glow Effect */}
                         <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                        {/* Logo */}
                         <div className="relative z-10">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             src={tech.logo || "/placeholder.svg"}
                             alt={`${tech.name} logo`}
@@ -148,12 +180,10 @@ export default function TechStack() {
                           />
                         </div>
 
-                        {/* Name */}
                         <span className="text-sm font-medium text-center">
                           {tech.name}
                         </span>
 
-                        {/* Level Indicator */}
                         <div className="absolute bottom-2 left-2 right-2 h-1 rounded-full bg-muted overflow-hidden">
                           <div
                             className={`h-full ${levelColors[tech.level]} transition-all duration-300 group-hover:opacity-100`}

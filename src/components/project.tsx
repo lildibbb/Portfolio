@@ -1,13 +1,12 @@
 "use client";
 
 import { ProjectCard } from "@/components/ui/project-card";
-// import { Badge } from "@/components/ui/badge";
-// import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Github, Globe } from "lucide-react";
 import physioconnect from "@/assets/physioconnect.png";
-import crypto_trading_bot from "@/assets/crypto_trading_bot.png";
+import smc_tradingview from "@/assets/smc_tradingview.png";
 import movie_dex from "@/assets/movie_dex.png";
+
 const projects = [
   {
     title: "PhysioConnect",
@@ -38,29 +37,23 @@ const projects = [
     ],
   },
   {
-    title: "Crypto Trading Bot",
+    title: "SMC Multi-Timeframe TradingView",
     description:
-      "A real-time crypto trading platform in development, utilizing Binance WebSocket for live market updates. The platform is designed with a seamless UI for efficient trading, and AI-driven market analysis will be integrated in the future.",
-    dates: "2025 - Present",
+      "Multi-timeframe TradingView Pine Script for Smart Money Concepts. Detects Fair Value Gaps, Order Blocks, Break of Structure, Market Structure Shifts, and Engulfing candles to generate high-probability confluence signals. Ideal for traders seeking precision in market structure analysis.",
+    dates: "2025",
     tags: [
-      "TypeScript",
-      "React",
-      "Vite",
-      "TanStack Router",
-      "ShadCNUI",
-      "Lightweight Chart (TradingView)",
-      "FastAPI",
-      "Python",
-      "TortoiseORM",
-      "PostgreSQL",
-      "Aerich",
+      "Pine Script",
+      "TradingView",
+      "Trading Strategy",
+      "Technical Analysis",
+      "Smart Money Concepts",
     ],
-    image: crypto_trading_bot, // Replace this with your project image reference
+    image: smc_tradingview,
     links: [
       {
         icon: <Github className="h-4 w-4" />,
         type: "GitHub",
-        href: "https://github.com/lildibbb/crypto_trading",
+        href: "https://github.com/lildibbb/smc-mtf-tradingview",
       },
     ],
   },
@@ -70,7 +63,7 @@ const projects = [
       "Movie platform to give ratings and reviews for watched movies",
     dates: "2024",
     tags: ["TypeScript", "React", "Laravel"],
-    image: movie_dex, // Replace this with your project image reference
+    image: movie_dex,
     links: [
       {
         icon: <Github className="h-4 w-4" />,
@@ -110,7 +103,6 @@ export default function Projects() {
           </motion.p>
         </div>
 
-        {/* Project List */}
         <motion.div
           className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
           initial={{ opacity: 0 }}
@@ -124,7 +116,7 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 + 0.6 }}
               whileHover={{ y: -5 }}
-              className="transform transition-all duration-300 hover:shadow-xl"
+              className="transform transition-all duration-300"
             >
               <ProjectCard {...project} />
             </motion.div>
