@@ -8,7 +8,7 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
-} from "motion/react";
+} from "framer-motion";
 import React, { PropsWithChildren, useRef } from "react";
 
 import { cn } from "@/lib/utils";
@@ -49,7 +49,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
       return React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === DockIcon) {
           return React.cloneElement(child, {
-            ...child.props,
+            ...(child as any).props,
             mouseX: mouseX,
             size: iconSize,
             magnification: iconMagnification,

@@ -1,8 +1,8 @@
 "use client";
 
 import { ProjectCard } from "@/components/ui/project-card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+// import { Badge } from "@/components/ui/badge";
+// import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Github, Globe } from "lucide-react";
 import physioconnect from "@/assets/physioconnect.png";
