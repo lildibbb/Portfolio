@@ -6,6 +6,7 @@ import { Github, Globe } from "lucide-react";
 import physioconnect from "@/assets/physioconnect.png";
 import smc_tradingview from "@/assets/smc_tradingview.png";
 import movie_dex from "@/assets/movie_dex.png";
+import task_reminder from "@/assets/task_reminder.png";
 
 const projects = [
   {
@@ -54,6 +55,27 @@ const projects = [
         icon: <Github className="h-4 w-4" />,
         type: "GitHub",
         href: "https://github.com/lildibbb/smc-mtf-tradingview",
+      },
+      
+    ],
+  },
+  {
+    title: "Task Reminder MVP",
+    description:
+      "Task Reminder System developed for Revnology",
+    dates: "2025",
+    tags: ["TypeScript", "Next.js", "Shadcn", "Tailwind CSS", "Nest.js", "TypeORM", "PostgreSQL", "Progressive Web App", "Redis", "Redux"],
+    image: task_reminder,
+    links: [
+      {
+        icon: <Github className="h-4 w-4" />,
+        type: "GitHub",
+        href: "https://github.com/lildibbb/task-reminder-mvp",
+      },
+      {
+        icon: <Globe className="h-4 w-4" />,
+        type: "Live Demo",
+        href: "https://task-reminder.adibasyraaf.com/",
       },
     ],
   },
