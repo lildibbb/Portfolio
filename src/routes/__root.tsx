@@ -1,4 +1,5 @@
 import { Outlet, createRootRoute } from "@tanstack/react-router";
+import { MainNav } from "@/components/main-nav";
 
 export const Route = createRootRoute({
   // beforeLoad: ({ context }) => {
@@ -10,7 +11,8 @@ export const Route = createRootRoute({
   // },
 
   component: () => (
-    <div className="min-h-screen  ">
+    <div className="min-h-screen relative pb-24 bg-background text-foreground">
+      <MainNav />
       <Outlet />
     </div>
   ),

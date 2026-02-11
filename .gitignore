@@ -26,3 +26,9 @@ dist-ssr
 # files
 .routeTree.gen.ts
 *.tsbuildinfo
+
+
+// MD files
+AGENTS.md
+PLANNING.md
+copilot-instructions.md
