@@ -86,7 +86,7 @@ function ProjectDetail() {
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 md:mb-6 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent break-words">
           {project.title}
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed max-w-2xl">
+        <p className="text-lg md:text-xl text-foreground/80 mb-6 md:mb-8 leading-relaxed max-w-2xl">
           {project.description}
         </p>
 
@@ -140,7 +140,7 @@ function ProjectDetail() {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-muted-foreground/80 hover:text-foreground hover:underline underline-offset-4 transition-colors text-sm md:text-base py-0.5 block"
+                className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-colors text-sm md:text-base py-0.5 block"
               >
                 {item.title}
               </a>
@@ -157,7 +157,7 @@ function ProjectDetail() {
           <CustomHeading level={2}>Overview</CustomHeading>
           <article
             className="prose prose-neutral dark:prose-invert max-w-none 
-                    prose-p:leading-7 md:prose-p:leading-8 prose-p:text-muted-foreground/90
+                    prose-p:leading-7 md:prose-p:leading-8 prose-p:text-foreground/90
                     prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
                     prose-code:before:content-none prose-code:after:content-none
                     prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:bg-secondary/80 prose-code:text-red-500/80 prose-code:font-mono prose-code:text-[0.85em]
@@ -208,7 +208,7 @@ function ProjectDetail() {
           >
             <article
               className="prose prose-neutral dark:prose-invert max-w-none 
-                        prose-p:leading-7 md:prose-p:leading-8 prose-p:text-muted-foreground/90
+                        prose-p:leading-7 md:prose-p:leading-8 prose-p:text-foreground/90
                         prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
                         prose-code:before:content-none prose-code:after:content-none
                         prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:bg-secondary/80 prose-code:text-red-500/80 prose-code:font-mono prose-code:text-[0.85em]

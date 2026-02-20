@@ -20,7 +20,7 @@ const socialLinks = [
   },
   {
     icon: <Twitter className="h-5 w-5" />,
-    href: "https://x.com/adbsyrff",
+    href: "https://x.com/dibodevs",
     label: "Twitter",
   },
   {
@@ -30,9 +30,9 @@ const socialLinks = [
   },
   {
     icon: <FileUser className="h-5 w-5" />,
-    href: "/a.pdf",
+    href: "/Adib_Asyraaf_Junior_Software_Engineer_Resume.pdf",
     label: "Download Resume",
-    download: "Adib_Asyraaf_Resume.pdf",
+    download: "Adib_Asyraaf_Junior_Software_Engineer_Resume.pdf",
   },
 ];
 

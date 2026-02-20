@@ -65,14 +65,12 @@ export function ProjectCard({
               <h3 className="text-3xl font-bold tracking-tight group-hover:text-primary transition-colors">
                 {title}
               </h3>
-              <p className="text-sm text-muted-foreground font-medium">
+              <p className="text-sm text-muted-foreground font-semibold">
                 {dates}
               </p>
             </div>
 
-            <p className="text-muted-foreground leading-relaxed">
-              {description}
-            </p>
+            <p className="text-foreground/80 leading-relaxed">{description}</p>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2">

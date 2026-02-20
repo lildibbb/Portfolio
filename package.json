@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "list": "bun run list"
+    "list": "bun run list",
+    "deploy:portfolio": "bun run build && wrangler pages deploy dist --project-name=portfolio"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -52,6 +53,7 @@
     "tailwindcss": "3.3.3",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "wrangler": "^4.64.0"
   }
 }

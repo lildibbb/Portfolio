@@ -24,7 +24,7 @@
     --secondary-foreground: 24 10% 10%;
 
     --muted: 40 10% 90%;
-    --muted-foreground: 25 5% 45%; /* Softer gray for muted text */
+    --muted-foreground: 25 5% 35%; /* Darker gray for better contrast on cream background */
 
     --accent: 40 15% 92%;
     --accent-foreground: 24 10% 10%;
