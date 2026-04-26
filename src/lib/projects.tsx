@@ -18,6 +18,11 @@ import homelab_infra from "@/assets/homelab_infra.png";
 import invoice1_1_workflow from "@/assets/invoice1.1-workflow.png";
 import invoice1_1_problems from "@/assets/invoice1.1_problems.png";
 import invoice1_1_result from "@/assets/invoice1.1_submitted.png";
+import titan_journal_crm from "@/assets/journaltitan.png";
+import titan_journal_dashboard from "@/assets/titanjournal_leads_dashboard.png";
+import titan_journal_telegram from "@/assets/titanjournal_telegram.png";
+import titan_journal_kb from "@/assets/titanjournal_knowledge base.png";
+
 
 import type { ReactNode } from "react";
 
@@ -44,6 +49,95 @@ export interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: "Titan Journal CRM",
+    slug: "titan-journal-crm",
+    description:
+      "Freelance project for a well-known Forex trader in Malaysia. It's a Telegram CRM backend that naturally chats with leads, guides them through a sales funnel, and provides a real-time dashboard for tracking daily performance.",
+    dates: "2026",
+    tags: [
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "RAG",
+      "HyDE",
+      "Redis",
+      "BullMQ",
+      "R2 Cloudflare",
+      "Docker",
+      "Ansible",
+      "Freelance",
+    ],
+    image: titan_journal_crm,
+    links: [
+      {
+        icon: <Globe className="h-4 w-4" />,
+        type: "Live Demo",
+        href: "https://titanjournal-staging.adibasyraaf.com/",
+      },
+    ],
+    content: `# Titan Journal CRM
+
+I actually built this as a freelance project for one of the well-known Forex traders here in Malaysia. He had a massive influx of messages, so the goal was to turn his Telegram into a full-blown CRM. It captures every new lead, replies instantly with a natural, human-like tone, moves people through a custom sales funnel, and gives him a clean dashboard to track daily performance without the manual admin headache.
+
+![Titan Journal CRM Dashboard](${titan_journal_dashboard})
+
+![smoll Titan Journal Telegram Interface](${titan_journal_telegram})
+
+## What it actually does
+Instead of just being a basic bot, this system acts more like a virtual assistant:
+- **Always Online:** It handles Telegram lead capture and conversation management 24/7.
+- **Smart Replies:** Uses AI to reply naturally, with safety checks and a custom brand tone.
+- **Sales Funnel:** Automatically guides leads from the first contact, to registration, all the way to making a deposit.
+- **Live Dashboard:** Real-time analytics so the owner can see leads, registrations, and deposits at a glance.
+- **Taking Over:** A manual handover mode, so the owner can jump in and pause the AI whenever they want to chat directly.
+- **Operations:** Handles deposit proof verification, broadcasts, and even scheduled follow-up nudges.
+
+## The Outcome
+The whole point was to stop him from losing leads due to slow replies and to centralize all that chat history. It successfully combined AI automation and operational tooling into one solid backend, making sales follow-up a breeze for him and his team.`,
+    wikiSections: [
+      {
+        title: "AI Pipeline & RAG",
+        id: "engineering",
+        content: `
+# AI Pipeline & RAG
+
+## Keeping it Safe (Message Guard)
+Every incoming message goes through a safety layer before it even touches the AI. I used a regex pass to catch obvious prompt-injection tricks, followed by a classifier running on **Gemini 2.5 Flash**. It basically labels the message as in-domain, off-topic, or a prompt injection attempt, giving it a confidence score.
+
+## How it Searches (HyDE)
+For retrieving info, I went with HyDE. Instead of just searching with the raw question, the model first guesses a hypothetical answer, embeds that using **Gemini-embedding 1.1**, and then searches the knowledge base using cosine similarity in pgvector. If a question is super short (five words or fewer), it skips HyDE and just embeds the text directly to save time.
+
+## Feeding it Knowledge
+To teach the AI, the owner can upload PDFs, DOCX files, images, video links, or even plain text. 
+
+![smoll Knowledge Base Ingestion](${titan_journal_kb})
+
+These uploads get thrown into a BullMQ queue, where background workers chunk the text, embed it, and store it in PostgreSQL. When chatting, these retrieved chunks are injected into the system prompt along with a sliding window of recent messages, so the bot actually remembers what it's talking about!
+`,
+      },
+      {
+        title: "CRM, Infra & Delivery",
+        id: "devops",
+        content: `
+# CRM, Infra & Delivery
+
+## The Telegram CRM Flow
+The bot itself runs on \`nestjs-telegraf\`. Every message is routed into a structured lead timeline so nothing gets lost. I also built a persona service to lock in the brand's tone, a few-shot service to keep responses stylish, and an output validator that double-checks the formatting before hitting "send."
+
+## Lead Operations
+Handling deposit proofs manually is a pain. So, I built a media pipeline where screenshots or video recordings are automatically uploaded to S3-compatible storage and attached straight to the lead’s record. The owner just checks the dashboard, hits approve or reject, and can easily trigger broadcasts or schedule nudges for leads who went quiet.
+
+## Analytics & Secure Access
+The analytics module is pretty straightforward—it aggregates new leads, registrations, and deposits daily, weekly, and monthly. Access to the dashboard is locked down with role-based permissions using Passport JWT, refresh-token rotation, and Redis-backed session invalidation to keep it secure.
+
+## Deployment & CI/CD
+Everything is containerised with Docker Compose (with separate profiles for base, dev, staging, and production). On the production side, Nginx handles the ingress, Certbot takes care of TLS renewals, and there's a backup sidecar doing daily \`pg_dump\` archives. I used Ansible to automate the VPS provisioning, while GitHub Actions builds, pushes, and deploys everything securely over SSH.
+`,
+      },
+    ],
+  },
   {
     title: "Invoice API",
     slug: "invoice-api",
